@@ -1,0 +1,68 @@
+# -----------------------------------------------#
+#         OrderPlugin Main Configuration          #
+# -----------------------------------------------#
+
+# The plugin prefix, used in most messages.
+# Set to "" (empty) for no prefix.
+prefix: ""
+
+# Order Settings
+orders:
+  # Default limit for active orders per player.
+  # Can be bypassed using permission: donutorders.limit.<number> (e.g. donutorders.limit.50)
+  max-active-per-player: 10
+
+  # Minimum price per item. (Prevents orders for $0.0001)
+  min-price-per-item: 0.01
+
+  # A percentage-based tax taken when creating an order.
+  # 0.05 = 5%
+  # 0.0  = 0% (disabled)
+  creation-tax-percent: 0.05
+  
+  # Blacklisted items that cannot be ordered
+  blacklist:
+    - "BARRIER"
+    - "COMMAND_BLOCK"
+    - "CHAIN_COMMAND_BLOCK"
+    - "REPEATING_COMMAND_BLOCK"
+    - "STRUCTURE_BLOCK"
+    - "STRUCTURE_VOID"
+    - "JIGSAW"
+    - "LIGHT"
+    - "DEBUG_STICK"
+    - "BEDROCK"
+    - "KNOWLEDGE_BOOK"
+    - "SPAWNER"
+    - "END_PORTAL_FRAME"
+    - "BUDDING_AMETHYST"
+    - "REINFORCED_DEEPSLATE"
+    - "TRIAL_SPAWNER"
+    - "VAULT"
+
+# Titles for the Graphical User Interfaces (GUIs)
+# You can use %page% for page numbers
+gui-titles:
+  main-menu: "ᴏʀᴅᴇʀꜱ (Page %page%)"
+  your-orders: "ᴏʀᴅᴇʀꜱ -> ʏᴏᴜʀ ᴏʀᴅᴇʀꜱ"
+  new-order: "ᴏʀᴅᴇʀꜱ -> ɴᴇᴡ ᴏʀᴅᴇʀ"
+  item-selector: "ꜱᴇʟᴇᴄᴛ ɪᴛᴇᴍ (Page %page%)"
+  deliver-items: "ᴏʀᴅᴇʀꜱ -> ᴅᴇʟɪᴠᴇʀ ɪᴛᴇᴍꜱ"
+  confirm-delivery: "ᴏʀᴅᴇʀꜱ -> ᴄᴏɴꜰɪʀᴍ ᴅᴇʟɪᴠᴇʀʏ"
+  confirm-sell: "ᴏʀᴅᴇʀꜱ -> ᴄᴏɴꜰɪʀᴍ ꜱᴇʟʟ"
+  edit-order: "ᴏʀᴅᴇʀꜱ -> ᴇᴅɪᴛ ᴏʀᴅᴇʀ"
+  # The collection GUI title is generated dynamically (e.g., "Collected: Bones")
+
+# Data storage settings
+storage:
+  # Types: H2, MYSQL
+  type: H2
+  
+  # MySQL Credentials (only used if type is MYSQL)
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "donutorders"
+    username: "root"
+    password: ""
+    ssl: false

@@ -1,0 +1,232 @@
+# -----------------------------------------------#
+#       DonutOrders - Messages Configuration      #
+# -----------------------------------------------#
+#
+# Available Placeholders:
+#   {prefix} - The prefix defined in config.yml
+#   %player% - The player's name
+#   %seller% - The seller's name  
+#   %amount% - The amount (e.g., 64)
+#   %item% - The item's name (e.g., Oak Logs)
+#   %price% - The price (e.g., $100.00)
+#   %total% - The total price
+#   %limit% - A limit (e.g., 10)
+#
+
+# ============================================
+# GENERAL MESSAGES
+# ============================================
+general:
+  player-only: "&cOnly players can use this command."
+  no-permission: "&cYou don't have permission to use this command."
+  reload-success: "&aDonutOrders config and messages reloaded successfully!"
+
+# ============================================
+# ERROR MESSAGES
+# ============================================
+errors:
+  not-enough-money: "{prefix}&cYou don't have enough money! You need &e%total%&c."
+  not-owner: "{prefix}&cYou cannot cancel someone else's order."
+  own-order: "{prefix}&cYou cannot fulfill your own order!"
+  already-complete: "{prefix}&cYou cannot cancel an order that is already complete."
+  max-orders-reached: "{prefix}&cYou have reached the maximum number of active orders (&e%limit%&c)."
+  min-price-not-met: "{prefix}&cMinimum price is &e%price%"
+  invalid-number: "{prefix}&cInvalid number."
+  invalid-number-format: "{prefix}&cInvalid number. Use format: 100, 1k, 10k, 1m"
+  positive-only: "{prefix}&cPositive numbers only."
+  wrong-item: "{prefix}&cWrong item type!"
+  no-items-in-inventory: "{prefix}&cYou do not have any &e%item%&c in your inventory."
+  set-item-amount-price: "{prefix}&cPlease set Item, Amount and Price!"
+  order-not-found: "&cOrder not found."
+  player-not-found: "&cPlayer %player% not found."
+  cant-fulfill-own: "{prefix}&cCan't fulfill own order!"
+
+# ============================================
+# SUCCESS MESSAGES
+# ============================================
+success:
+  order-created: "&fYou ordered &#00d271%amount% %item%"
+  order-cancelled: "{prefix}&aOrder cancelled. You have been refunded &e%price%&a and any collected items."
+  order-fulfilled: "&fYou delivered &a%amount% %item% &fand received &a%price%"
+  order-received: "&a%seller% &fdelivered you &a%amount% %item%"
+  order-complete: "&fYour &a%item% &forder is complete!"
+  delivery-cancelled: "{prefix}&cDelivery cancelled. Your items have been returned."
+  items-dropped: "{prefix}&aDropped all items to your inventory!"
+  order-archived: "{prefix}&aOrder completed and archived!"
+  potion-selected: "{prefix}&aPotion type selected!"
+  amount-set: "{prefix}&aAmount set to: %amount%"
+  price-set: "{prefix}&aPrice set to: $%price%"
+  filter-applied: "{prefix}&aFiltering items for: &e%search%"
+  search-applied: "{prefix}&aSearching for: &e%search%"
+  search-cleared: "{prefix}&aSearch cleared!"
+
+# ============================================
+# GUI MESSAGES (Chat prompts)
+# ============================================
+gui:
+  type-amount: "{prefix}&aType amount in chat:"
+  type-price: "{prefix}&aType price in chat:"
+  type-filter: "{prefix}&eType name to filter (e.g. 'wood'):"
+  type-search: "{prefix}&eType item name to search (or 'clear' to reset):"
+  sell-all-coming-soon: "{prefix}&eSell All is coming soon!"
+  
+  # New Order GUI
+  new-order:
+    item-not-selected: "{prefix}&cPlease select an item."
+    amount-not-set: "{prefix}&cPlease set an amount."
+    price-not-set: "{prefix}&cPlease set a price."
+
+  # ============================================
+  # GUI BUTTON TEXTS
+  # ============================================
+  buttons:
+    # Main Menu buttons
+    sort: "&5ꜱᴏʀᴛ"
+    filter: "&5ꜰɪʟᴛᴇʀ"
+    orders: "&aᴏʀᴅᴇʀꜱ"
+    search: "&eꜱᴇᴀʀᴄʜ"
+    your-orders: "&aʏᴏᴜʀ ᴏʀᴅᴇʀꜱ"
+    next-page: "&aɴᴇxᴛ ᴘᴀɢᴇ"
+    no-next-page: "&7ɴᴏ ɴᴇxᴛ ᴘᴀɢᴇ"
+    previous-page: "&eᴘʀᴇᴠɪᴏᴜꜱ ᴘᴀɢᴇ"
+    no-previous-page: "&7ɴᴏ ᴘʀᴇᴠɪᴏᴜꜱ ᴘᴀɢᴇ"
+    
+    # New Order GUI buttons
+    cancel: "&cᴄᴀɴᴄᴇʟ"
+    confirm: "&aᴄᴏɴꜰɪʀᴍ"
+    item: "&eɪᴛᴇᴍ"
+    amount: "&aᴀᴍᴏᴜɴᴛ"
+    price: "&bᴘʀɪᴄᴇ"
+    new-order: "&aɴᴇᴡ ᴏʀᴅᴇʀ"
+    
+    # Edit Order GUI buttons
+    cancel-order: "&cᴄᴀɴᴄᴇʟ ᴏʀᴅᴇʀ"
+    delete-order: "&cᴅᴇʟᴇᴛᴇ ᴏʀᴅᴇʀ"
+    collect-items: "&aᴄᴏʟʟᴇᴄᴛ ɪᴛᴇᴍꜱ"
+    go-back: "&cɢᴏ ʙᴀᴄᴋ"
+    back: "&aʙᴀᴄᴋ"
+    back-to-editor: "&cʙᴀᴄᴋ ᴛᴏ ᴇᴅɪᴛᴏʀ"
+    back-to-order: "&cʙᴀᴄᴋ ᴛᴏ ᴏʀᴅᴇʀ"
+    
+    # Collection GUI buttons (with special Unicode font)
+    sell-all: "&#00f986ꜱᴇʟʟ ᴀʟʟ"
+    drop-all: "&#00f986ᴅʀᴏᴘ ᴀʟʟ"
+    collection-back: "&#00f986ʙᴀᴄᴋ"
+    collection-next: "&#00f986ɴᴇxᴛ"
+    
+  # ============================================
+  # ENCHANTMENT PICKER GUI
+  # ============================================
+  enchantment-picker:
+    title: "ᴘɪᴄᴋ ᴇɴᴄʜᴀɴᴛᴍᴇɴᴛꜱ"
+    click-to-select: "&7Click to select"
+    selected: "&aSelected"
+    confirm: "&#00f986ᴄᴏɴꜰɪʀᴍ"
+    cancel: "&#00f986ᴄᴀɴᴄᴇʟ"
+    next: "&#00f986ɴᴇxᴛ"
+    back: "&#00f986ʙᴀᴄᴋ"
+    
+  # ============================================
+  # GUI LORE TEXTS (Item descriptions)
+  # ============================================
+  lore:
+    # Main menu order item
+    each: "each"
+    delivered: "Delivered"
+    paid: "Paid"
+    click-to-deliver: "&fClick to deliver &a%player% &f%item%"
+    until-order-expires: "&7%time% Until Order expires"
+    until-order-deletes: "&7%time% Until Order deletes"
+    owners-order: "&a%player%'s Order"
+    
+    # Sort options
+    most-paid: "Most Paid"
+    most-delivered: "Most Delivered"
+    recently-listed: "Recently Listed"
+    most-money-per-item: "Most Money Per Item"
+    
+    # Filter options
+    filter-all: "All"
+    filter-blocks: "Blocks"
+    filter-tools: "Tools"
+    filter-food: "Food"
+    filter-combat: "Combat"
+    filter-potions: "Potions"
+    filter-books: "Books"
+    filter-ingredients: "Ingredients"
+    filter-utilities: "Utilities"
+    
+    # Search button
+    current: "Current"
+    none: "None"
+    click-to-search: "&7Click to search by item name"
+    type-in-chat: "&7Type in chat (e.g. 'bone')"
+    
+    # Your Orders button
+    manage-listings: "&fManage your listings"
+    
+    # Buttons general
+    click-to-refresh: "&fClick to refresh"
+    return-to-orders: "&fReturn to Your Orders"
+    click-to-create: "&fClick to create a new buy order"
+    
+    # New Order GUI
+    selected: "&fSelected: &b%item%"
+    click-to-change: "&7Click to change item"
+    amount-value: "&fAmount: &e%amount%"
+    click-to-set-amount: "&7Click to set amount in chat"
+    price-per-item: "&fPrice per item: &a$%price%"
+    click-to-set-price: "&7Click to set price in chat"
+    total-cost: "&fTotal Cost: &a$%total%"
+    click-to-publish: "&7Click to publish order"
+    
+    # Edit Order GUI
+    order-label: "&aOrder: %item%"
+    progress: "&fProgress: %filled%/%total%"
+    price-label: "&fPrice: $%price%"
+    click-to-cancel: "&fClick to cancel this order"
+    refunds-remaining: "&c(Refunds remaining money)"
+    collect-first: "&c(Collect items first!)"
+    items-waiting: "&fItems waiting: &6%amount%"
+    click-to-open-storage: "&eClick to open storage"
+    order-completed: "&a&lORDER COMPLETED!"
+    
+    # Confirm Delivery GUI
+    cancel-return-items: "&fCancel and return items"
+    click-to-deliver-items: "&fClick to deliver items"
+    youre-delivering: "&7You're delivering &a%amount% &f%item%"
+    
+    # Item Selector
+    current-filter: "&fCurrent Filter: &e%filter%"
+    click-type-name: "&7Click to type name in chat"
+    filter-description: "&7(Filters the list like 'wood' -> 'oak wood')"
+    
+    # Collection GUI
+    coming-soon: "&7Coming Soon!"
+    
+    # Order removed by admin
+    removed-by-admin: "&c&lREMOVED BY ADMIN"
+    items-to-collect: "&fItems to Collect: &6%amount%"
+    click-to-collect: "&eClick to collect your items"
+
+# ============================================
+# DELIVERY MESSAGES
+# ============================================
+delivery:
+  items-returned: "&e[Order] %amount% items returned (Limit reached)."
+  shulkers-returned: "&a[Order] %amount% shulker box(es) returned!"
+  delivering-actionbar: "&7&oDelivering..."
+
+# ============================================
+# ADMIN MESSAGES
+# ============================================
+admin:
+  help-header: "&6&l=== DonutOrders Admin ==="
+  help-reload: "&e/donutordersadmin reload &7- Reload config"
+  help-removeorder: "&e/donutordersadmin removeorder <player> <order_id> &7- Remove an order"
+  usage-removeorder: "&cUsage: /donutordersadmin removeorder <player> <order>"
+  order-removed: "&aOrder of &e%amount% %item% &ahas been removed. Refund: &e%price%"
+  order-removed-with-items: "&aOrder of &e%amount% %item% &ahas been removed. Refund: &e%price% &7(Player can still collect %collected% items)"
+  order-removed-player: "&cYour order of &e%amount% %item% &chas been removed by an admin. Refund: &e%price%&c."
+  order-removed-collect: " &7Use &e/order &7-> &eYour Orders &7to collect your items."
+  orders-deleted: "&a%amount% orders have been deleted!"

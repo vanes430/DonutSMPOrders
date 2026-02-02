@@ -1,0 +1,28 @@
+name: ${project.name}
+version: ${project.version}
+author: vanes430
+website: https://github.com/vanes430
+folia-supported: true
+main: github.vanes430.orderplugin.OrderPlugin
+api-version: '1.21'
+
+depend: [Vault]
+
+commands:
+  order:
+    description: Main command for the order system.
+    usage: /<command> [item]
+    aliases: [orders]
+    permission: donutorders.use
+  donutordersadmin:
+    description: Admin commands for DonutOrders.
+    usage: /<command> <subcommand>
+    permission: donutorders.admin
+
+permissions:
+  donutorders.use:
+    description: Allows players to use the /order command.
+    default: true
+  donutorders.admin:
+    description: Allows players to use the /donutordersadmin command.
+    default: op
